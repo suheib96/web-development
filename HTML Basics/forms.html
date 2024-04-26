@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Jetzt schauen wir uns an wie forms in HTML funktionieren</h1>
+
+    <form>
+      <fieldset>
+        <legend>Personal Information:</legend>
+        <label for="firstname">Vorname:</label>
+        <input id="firstname" type="text" value="John" readonly />
+        <br />
+        <br />
+        <label for="lastname">Nachname:</label>
+        <input id="lastname" type="text" disabled />
+        <br />
+        <br />
+        <label for="email">E-Mail:</label>
+        <input id="email" type="email" placeholder="suheib@suheib.suheib" />
+        <br />
+        <br />
+        <label for="password">Passwort*:</label>
+        <input id="password" type="password"  size="40" placeholder="passwort" required/>
+        <br />
+        <br />
+        <label>Datum</label>
+        <input type="date" />
+        <br />
+        <br />
+        <label>Magst du Pizza?</label>
+        <br />
+        <label>ja</label>
+        <input name="pizza" type="radio" />
+        <label>nein</label>
+        <input name="pizza" type="radio" />
+        <br />
+        <br />
+        <label>Hobbies:</label><br />
+        <label for="basketball">Basketball spielen</label>
+        <input id="basketball" type="checkbox" value="Basketball spielen" />
+        <label for="fahrrad">Fahrrad fahren</label>
+        <input id="fahrrad" type="checkbox" value="Fahrrad fahren" />
+        <br />
+        <br />
+        <select>
+          <option value="">Hund</option>
+          <option value="">Katze</option>
+          <option value="">Schlange</option></select>
+        <br />
+        <br />
+        <textarea cols="30" rows="10" maxlength="50" minlength="10" placeholder="50 Zeichen"></textarea>
+        <input type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
