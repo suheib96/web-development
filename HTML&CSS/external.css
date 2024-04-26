@@ -1,6 +1,9 @@
 h1{
     color: brown;
     font-size: 80px;
+    border: 10px blue dotted ;
+    padding: 100px 0px 30px 10px;
+    
 }
 
 p{
@@ -10,8 +13,10 @@ p{
 /* mit Raute können wir IDs ansprechen */
 #middle {
     color: red;
+    margin-top: 5px;
 }
 
 .abc{
     color:green;
+    margin-bottom: 5px;
 }
