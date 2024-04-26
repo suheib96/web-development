@@ -1,0 +1,17 @@
+h1{
+    color: brown;
+    font-size: 80px;
+}
+
+p{
+    color: blue;
+    font-size: 30px;
+}
+/* mit Raute können wir IDs ansprechen */
+#middle {
+    color: red;
+}
+
+.abc{
+    color:green;
+}
