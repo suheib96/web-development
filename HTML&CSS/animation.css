@@ -1,0 +1,40 @@
+.element1 {
+  width: 200px;
+  height: 200px;
+  animation: pulsieren 2s infinite alternate-reverse;
+}
+
+@keyframes farbenspiel {
+  0% {
+    background-color: red;
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 200px;
+  }
+
+  100% {
+    background-color: blue;
+    margin-left: 200px;
+    margin-top: 500px;
+    width: 5px;
+  }
+}
+
+@keyframes pulsieren {
+    0%,100% {
+        background-color: yellow;
+     
+    }
+  
+    50% {
+        background-color: red;
+     
+    }
+  }
+div:hover {
+    background-color: purple;
+}
+
+img:hover{
+    transform: scale(2,5);
+}
