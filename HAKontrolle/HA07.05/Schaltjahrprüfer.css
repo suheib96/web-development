@@ -1,0 +1,37 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    box-shadow: 50px 50px 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    
+}
+
+button{
+    background-color: #4cAf50;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #6fe073;
+}
+button:active{
+    background-color: #93ff95;
+}
