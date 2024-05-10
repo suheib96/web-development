@@ -1,0 +1,28 @@
+FrontEnd 
+HTML + CSS + JS
+
+Frontend ist all das was der Anwender sehen kann oder interagieren kann. 
+
+BackEnd 
+
+Python, Javascript, Java, GO, Ruby, PHP ...
+(Flask),  NODE.js         , (Spring Boot), .. , Ruby on Rails  
+
+Backend ist all das was der Anwender NICHT sieht. 
+
+
+Nachdem der NODE. js installation:
+
+Bestätige, dass Node erfolgreich installiert wurde, indem du ein Terminal den Befehl "node -v" eingibst. 
+Bestätige, dass Npm erfolgreich installiert wurde, indem du ein Terminal den Befehl "npm -v" eingibst. 
+
+
+NPM init -> erstellt package.json (Konfigurationsdatei)
+npm install sillyname-> Sillyname Paket installieren
+Das installierte Paket in meine Javascript Datei einbinden ( z.b mit require('sillyname'))
+
+Bei runtergeladenen Projekten geben wir "npm install" ein & der würde dann automatisch alles was in der Package.json 
+"dependencies" drin steht runterladen. 
+
+Den Ordner node_modules bitte immer im .gitignore Datei hinzufügen !!!
+Sonst wird euer Github Repo platzen.
