@@ -1,0 +1,50 @@
+<!-- Aufgabe 2:
+Erstelle eine kleine Webseite, die auf Knopfdruck ein zufälliges Passwort
+ generiert und es auf der Konsole oder in einem p-Element ausgibt.
+  Das Passwort sollte eine Kombination aus Buchstaben, 
+  Zahlen und Sonderzeichen enthalten und eine vom Benutzer festgelegte Länge haben. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passwortgenerator</title>
+  </head>
+  <body>
+    <h1>Dein persönlicher Passwortgenerator</h1>
+    <label for="laenge">Länge eingeben:</label>
+    <input
+      id="inputField"
+      type="number"
+      name="laenge"
+      placeholder="Gewünscht Länge:"
+    />
+    <button id="generateBtn">Passwort generieren</button>
+
+    <p id="result"></p>
+
+    <script>
+      let pTag = document.getElementById("result");
+
+      function generierePasswort() {
+        let inputField = document.getElementById("inputField");
+        let laenge = inputField.value;
+        let result = "";
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$!,.§";
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < laenge) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+          );
+          counter += 1;
+        }
+        pTag.innerText = result;
+      }
+
+      let btn = document.getElementById("generateBtn");
+      btn.onclick = generierePasswort;
+    </script>
+  </body>
+</html>

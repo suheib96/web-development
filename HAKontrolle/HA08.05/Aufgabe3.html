@@ -1,0 +1,35 @@
+<!-- Erstelle eine Website mit einem Button und füge ein Javascript ein. Das Javascript soll bewirken, dass wenn der Button gedrückt wird, sich die Farbe des Buttons verändert. 
+Bonus: Schreibe eine Funktion, die eine zufällige Farbe generiert (in der Form “#123ABC”). Siehe dir dazu gerne die Hexadezimal-Schreibweise für Farben in CSS an. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Button</title>
+  </head>
+  <body>
+    <h1>Random Farbe</h1>
+
+    <button id="btn">Generiere Random Farbe</button>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let body = document.querySelector("body")
+      function colortable() {
+        var farbcodebasis = "0123456789ABCDEF";
+        var finalcode = "#";
+        for (var counter = 0; counter < 6; counter++) {
+          finalcode = finalcode + farbcodebasis[Math.floor(Math.random() * 16)];
+        }
+        return finalcode;
+      }
+
+      btn.onclick = function () {
+        btn.style.backgroundColor = colortable()
+        body.style.backgroundColor = colortable()
+      };
+      
+    </script>
+  </body>
+</html>
