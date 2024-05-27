@@ -1,0 +1,38 @@
+.container {
+  margin: 10%; 
+  padding: 80px; 
+  text-align: center;
+}
+.container h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+body {
+  color: white;
+  background: #50a3a2;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+button {
+
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  min-width: 250px;
+  font-size: 18px;
+}
