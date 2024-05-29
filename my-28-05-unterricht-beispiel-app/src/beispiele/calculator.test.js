@@ -1,6 +1,6 @@
 // const { plus, mal, geteilt, minus, randomNumber } = require("./calculator");
 import { plus, mal, geteilt, minus, randomNumber } from "./calculator";
-/*
+
 test("Mal Funktion (5*6)", () => {
   const ergebnis = mal(5, 6);
   expect(ergebnis).toBe(30);
@@ -15,7 +15,7 @@ describe("Plus funktion", ()=>{
         expect(plus(1,1)).toBe(2);
     })
 })
-*/
+
 /*
 describe("name", ()=>{
 
