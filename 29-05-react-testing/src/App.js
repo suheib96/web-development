@@ -8,11 +8,12 @@ function App() {
   // bedingung ? ergebnis wenn true : ergebnis wenn false
   const nextColor = buttonColor === "rot" ? "blau" : "rot";
   const nextDisabledState = isButtonDisabled === false ? true : false;
-
+  const classeFarbenName = isButtonDisabled ? "grau" : buttonColor;
+  
   function farbeWechseln() {
     setButtonColor(nextColor);
   }
-
+  
   function handleCheckboxChange() {
     // setIsButtonDisabled((prevState) => !prevState)
     setIsButtonDisabled(nextDisabledState);
@@ -22,13 +23,17 @@ function App() {
     <div className="App">
       <button
         disabled={isButtonDisabled}
-        className={buttonColor}
+        className={classeFarbenName}
         onClick={farbeWechseln}
       >
         Farbe zu {nextColor} wechseln
       </button>
       <br></br>
-      <input id="checkbox" onChange={handleCheckboxChange} type="checkbox"></input>
+      <input
+        id="checkbox"
+        onChange={handleCheckboxChange}
+        type="checkbox"
+      ></input>
       <label htmlFor="checkbox">Disable Button</label>
       {/* <h1>Learn react</h1> */}
     </div>
