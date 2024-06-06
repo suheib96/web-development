@@ -1,4 +1,4 @@
-const { Builder, By } = require("selenium-webdriver");
+const { Builder, By, until } = require("selenium-webdriver");
 const fs = require("fs");
 
 beforeAll(async () => {
@@ -12,6 +12,8 @@ afterAll(async () => {
 
 test("sollte die neusten News scrapen", async () => {
   await driver.get("https://news.ycombinator.com/");
+
+  await driver.wait(until.elementsLocated(By.css(".athing")), 10000)
   const articles = await driver.findElements(By.css(".athing"));
   expect(articles.length).toBeGreaterThan(0);
 
