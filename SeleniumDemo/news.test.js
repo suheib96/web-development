@@ -13,7 +13,7 @@ afterAll(async () => {
 test("sollte die neusten News scrapen", async () => {
   await driver.get("https://news.ycombinator.com/");
 
-  await driver.wait(until.elementsLocated(By.css(".athing")), 10000)
+//await driver.wait(until.elementsLocated(By.css(".athing")), 10000) // Evtl einbauen, falls die Elemente noch länger laden
   const articles = await driver.findElements(By.css(".athing"));
   expect(articles.length).toBeGreaterThan(0);
 
