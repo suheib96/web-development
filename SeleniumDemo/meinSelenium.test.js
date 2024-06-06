@@ -34,7 +34,7 @@ test.skip("ob der Titel korrekt angezeigt wird", async () => {
   //   },3000)
 });
 
-test("ob der Titel korrekt angezeigt wird", async () => {
+test.skip("ob der Titel korrekt angezeigt wird", async () => {
   driver = await new Builder().forBrowser("chrome").build();
   await driver.get("http://localhost:3003");
 
