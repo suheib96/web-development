@@ -19,9 +19,9 @@ function TodoList() {
     setNewTask(event.target.value);
   }
 
-  function addTask() {
+  async function addTask() {
     if (newTask !== "") {
-      fetch("http://localhost:3002/tasks", {
+      await fetch("http://localhost:3002/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,6 +29,7 @@ function TodoList() {
         body: JSON.stringify({ task: newTask }),
       });
       fetchAllData();
+      setNewTask("")
     }
   }
 
@@ -53,10 +54,14 @@ function TodoList() {
     }
   }
 
-  function deleteTask(index) {
+  async function deleteTask(index) {
+    await fetch(`http://localhost:3002/tasks/${index}`,{
+      method: "DELETE"
+    })
+    fetchAllData()
     // const updatedTasks = tasks.filter((task, i) => i !== index);
-    const updatedTasks = tasks.filter((_, i) => i !== index); // quasi das gleiche, nur anders geschrieben
-    setTasks(updatedTasks);
+    // const updatedTasks = tasks.filter((_, i) => i !== index); // quasi das gleiche, nur anders geschrieben
+    // setTasks(updatedTasks);
   }
 
   return (
