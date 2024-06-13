@@ -45,6 +45,39 @@ app.post("/tasks", (req, res) => {
   }
 });
 
+// Move task up
+app.post('/tasks/up', (req, res) => {
+    const tasks = getTasks()
+  const { index } = req.body;
+  if (index > 0 && index < tasks.length) {
+    [tasks[index], tasks[index - 1]] = [tasks[index - 1], tasks[index]];
+    saveTasks(tasks)
+    res.json({ message: 'Task erfolgreich nach oben verschoben' });
+  } else {
+    res.status(400).json({ message: 'Invalider Index' });
+  }
+});
+
+// Move task down
+app.post('/tasks/down', (req, res) => {
+   const tasks = getTasks()
+  const { index } = req.body;
+  if (index >= 0 && index < tasks.length - 1) {
+    [tasks[index], tasks[index + 1]] = [tasks[index + 1], tasks[index]];
+    saveTasks(tasks)
+    res.json({ message: 'Task erfolgreich nach unten verschoben' });
+  } else {
+    res.status(400).json({ message: 'Invalider Index' });
+  }
+});
+
+
+
+
+
+
+
+
 app.delete("/tasks/:index", (req, res) => {
     let tasks = getTasks()
   // parseInt ist hier notwendig, da die params als String gespeichert werden
